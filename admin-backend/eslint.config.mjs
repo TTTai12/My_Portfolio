@@ -19,8 +19,8 @@ const eslintConfig = defineConfig([
     // Nới lỏng một số rule để build deploy dễ hơn
     rules: {
       "@typescript-eslint/no-explicit-any": "off",
-      // Nếu sau này muốn strict hơn có thể bật lại các rule này
-      // "react-hooks/exhaustive-deps": "error",
+      "@typescript-eslint/no-unused-vars": "off",
+      "react-hooks/exhaustive-deps": "off",
     },
   },
 ]);

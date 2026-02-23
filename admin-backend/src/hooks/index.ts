@@ -19,23 +19,19 @@ export function useData<T>(
     error: null,
   });
 
-  const fetchData = useCallback(
-    async () => {
-      setState((prev) => ({ ...prev, isLoading: true, error: null }));
-      try {
-        const data = await fetchFn();
-        setState({ data, isLoading: false, error: null });
-      } catch (error) {
-        setState({
-          data: null,
-          isLoading: false,
-          error: formatApiError(error),
-        });
-      }
-    },
-    // dùng array literal để thỏa react-hooks rules
-    [fetchFn, ...deps],
-  );
+  const fetchData = useCallback(async () => {
+    setState((prev) => ({ ...prev, isLoading: true, error: null }));
+    try {
+      const data = await fetchFn();
+      setState({ data, isLoading: false, error: null });
+    } catch (error) {
+      setState({
+        data: null,
+        isLoading: false,
+        error: formatApiError(error),
+      });
+    }
+  }, deps);
 
   useEffect(() => {
     fetchData();
@@ -57,22 +53,19 @@ export function useListData<T>(
     error: null,
   });
 
-  const fetchData = useCallback(
-    async () => {
-      setState((prev) => ({ ...prev, isLoading: true, error: null }));
-      try {
-        const items = await fetchFn();
-        setState({ items, isLoading: false, error: null });
-      } catch (error) {
-        setState({
-          items: [],
-          isLoading: false,
-          error: formatApiError(error),
-        });
-      }
-    },
-    [fetchFn, ...deps],
-  );
+  const fetchData = useCallback(async () => {
+    setState((prev) => ({ ...prev, isLoading: true, error: null }));
+    try {
+      const items = await fetchFn();
+      setState({ items, isLoading: false, error: null });
+    } catch (error) {
+      setState({
+        items: [],
+        isLoading: false,
+        error: formatApiError(error),
+      });
+    }
+  }, deps);
 
   useEffect(() => {
     fetchData();
