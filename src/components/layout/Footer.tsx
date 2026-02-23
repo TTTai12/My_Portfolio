@@ -9,28 +9,38 @@ const Footer: React.FC = () => {
   return (
     <footer className="site-footer">
       <p>
-        Dev. © 2025 Portfolio. {t("footer.rights")}
-        {" · "}
+        <strong>Tien Tran</strong> · Full‑Stack Developer {"  ·  "}
         <a
-          href={import.meta.env.VITE_ADMIN_URL || "http://localhost:3000/auth/login"}
+          href={
+            import.meta.env.VITE_ADMIN_URL || "http://localhost:3000/auth/login"
+          }
           style={{
             color: "inherit",
-            opacity: 0.5,
+            opacity: 0.65,
             textDecoration: "none",
-            fontSize: "0.9em",
-            transition: "opacity 0.2s",
+            fontSize: "0.85em",
+            borderBottom: "1px dashed rgba(255,255,255,0.3)",
+            paddingBottom: 1,
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.8")}
-          onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.5")}
+          onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
+          onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.65")}
         >
-          {t("footer.admin")}
+          {t("footer.admin")} panel
         </a>
       </p>
       <div className="social-links">
-        {/* Placeholder cho Social Icons, nên dùng Component Tag hoặc Icon */}
-        <a href="#">in</a>
-        <a href="#">TW</a>
-        <a href="#">GH</a>
+        <a
+          href="https://www.linkedin.com/in/tai-tien-tan-a2227b323/"
+          aria-label="LinkedIn"
+        >
+          in
+        </a>
+        <a href="https://github.com/TTTai12" aria-label="GitHub">
+          GH
+        </a>
+        <a href="mailto:tientantai12@gmail.com" aria-label="Email">
+          @
+        </a>
       </div>
     </footer>
   );
