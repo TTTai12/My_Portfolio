@@ -11,7 +11,7 @@ import { fetchWithRetry, formatApiError } from "@/lib/api";
  */
 export function useData<T>(
   fetchFn: () => Promise<T>,
-  deps: any[] = [],
+  deps: unknown[] = [],
 ): DataState<T> & { refetch: () => Promise<void> } {
   const [state, setState] = useState<DataState<T>>({
     data: null,
@@ -19,19 +19,23 @@ export function useData<T>(
     error: null,
   });
 
-  const fetchData = useCallback(async () => {
-    setState((prev) => ({ ...prev, isLoading: true, error: null }));
-    try {
-      const data = await fetchFn();
-      setState({ data, isLoading: false, error: null });
-    } catch (error) {
-      setState({
-        data: null,
-        isLoading: false,
-        error: formatApiError(error),
-      });
-    }
-  }, deps);
+  const fetchData = useCallback(
+    async () => {
+      setState((prev) => ({ ...prev, isLoading: true, error: null }));
+      try {
+        const data = await fetchFn();
+        setState({ data, isLoading: false, error: null });
+      } catch (error) {
+        setState({
+          data: null,
+          isLoading: false,
+          error: formatApiError(error),
+        });
+      }
+    },
+    // dùng array literal để thỏa react-hooks rules
+    [fetchFn, ...deps],
+  );
 
   useEffect(() => {
     fetchData();
@@ -45,7 +49,7 @@ export function useData<T>(
  */
 export function useListData<T>(
   fetchFn: () => Promise<T[]>,
-  deps: any[] = [],
+  deps: unknown[] = [],
 ): ListState<T> & { refetch: () => Promise<void> } {
   const [state, setState] = useState<ListState<T>>({
     items: [],
@@ -53,19 +57,22 @@ export function useListData<T>(
     error: null,
   });
 
-  const fetchData = useCallback(async () => {
-    setState((prev) => ({ ...prev, isLoading: true, error: null }));
-    try {
-      const items = await fetchFn();
-      setState({ items, isLoading: false, error: null });
-    } catch (error) {
-      setState({
-        items: [],
-        isLoading: false,
-        error: formatApiError(error),
-      });
-    }
-  }, deps);
+  const fetchData = useCallback(
+    async () => {
+      setState((prev) => ({ ...prev, isLoading: true, error: null }));
+      try {
+        const items = await fetchFn();
+        setState({ items, isLoading: false, error: null });
+      } catch (error) {
+        setState({
+          items: [],
+          isLoading: false,
+          error: formatApiError(error),
+        });
+      }
+    },
+    [fetchFn, ...deps],
+  );
 
   useEffect(() => {
     fetchData();
