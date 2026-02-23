@@ -1,0 +1,33 @@
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
+@media (max-width: 1024px) {
+    .about-section, .experience-education-section .content-columns, .contact-section {
+        grid-template-columns: 1fr; /* Chuyển sang bố cục cột đơn */
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+    .nav-links {
+        display: none; /* Ẩn menu nav, có thể thay bằng nút hamburger */
+    }
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .site-footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}

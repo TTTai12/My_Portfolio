@@ -1,0 +1,19 @@
+.contact-info h2 {
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    color: var(--color-text-secondary);
+    margin-bottom: 40px;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.contact-detail i {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    margin-right: 15px;
+}

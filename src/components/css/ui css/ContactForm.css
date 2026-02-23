@@ -1,0 +1,29 @@
+
+.contact-form {
+    background-color: var(--color-card);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-secondary);
+    color: var(--color-text-light);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn-primary {
+    align-self: flex-start;
+    padding: 10px 25px;
+    margin-top: 10px;
+}

@@ -1,0 +1,168 @@
+/* --- BIẾN VÀ THIẾT LẬP CƠ BẢN --- */
+:root {
+  /* Màu sắc */
+  --color-dark: #ffffff; /* Màu nền chính */
+  --color-card: #f0f0f0; /* Màu nền thẻ/khối */
+  --color-text-light: #111111;
+  --color-text-secondary: #555555;
+  --color-primary: #8d4fde; /* Màu chủ đạo/highlight (tím) */
+  --color-secondary: #4a5568; /* Màu nút phụ */
+  --color-accent-pink: #d946ef; /* Màu accent hồng (cho gradient) */
+  --color-accent-blue: #3b82f6; /* Màu accent xanh (cho gradient) */
+  --navbar-bg-rgba: 255, 255, 255; /* light RGB */
+  --navbar-bg-rgba-dark: 18, 18, 18; /* dark RGB */
+  --navbar-text: #111827;
+  --icon-color: #111827;
+
+  /* Font và Khoảng cách */
+  --font-family: "Inter", sans-serif; /* Giả định sử dụng font Inter */
+  --padding-section: 100px 5%;
+  --max-width: 1200px;
+  --border-radius: 8px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+:root[data-theme="dark"] {
+  /* Màu sắc */
+  --color-dark: #121212; /* Màu nền chính */
+  --color-card: #1f1f1f; /* Màu nền thẻ/khối */
+  --color-text-light: #f0f0f0;
+  --color-text-secondary: #aaaaaa;
+  --color-primary: #8d4fde; /* Màu chủ đạo/highlight (tím) */
+  --color-secondary: #4a5568; /* Màu nút phụ */
+  --color-accent-pink: #d946ef; /* Màu accent hồng (cho gradient) */
+  --color-accent-blue: #3b82f6; /* Màu accent xanh (cho gradient) */
+  --navbar-text: #e6eef8;
+  --icon-color: #e6eef8;
+
+  /* Font và Khoảng cách */
+  --font-family: "Inter", sans-serif; /* Giả định sử dụng font Inter */
+  --padding-section: 100px 5%;
+  --max-width: 1200px;
+  --border-radius: 8px;
+}
+:root[data-theme="dark"] .navbar.scrolled {
+  background-color: rgba(var(--navbar-bg-rgba-dark, 18, 18, 18), 0.95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.hero,
+main {
+  padding-top: 88px;
+} /* điều chỉnh theo chiều cao navbar */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 72px;
+  }
+}
+/* Cấu hình lại box-sizing và font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-dark);
+  color: var(--color-text-light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-text-light);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Ẩn các icon tạm thời trong HTML thuần */
+.icon-work,
+.icon-edu,
+.icon-code,
+.icon-linkedin,
+.icon-twitter,
+.icon-github,
+.icon-email,
+.icon-phone,
+.icon-location {
+  font-style: normal; /* Đảm bảo các placeholder không bị nghiêng */
+  margin-right: 5px;
+}
+
+/* --- CẤU TRÚC CHUNG CỦA SECTION --- */
+section {
+  margin: 0 auto;
+  padding: var(--padding-section);
+}
+
+.section-subtitle {
+  color: var(--color-text-secondary);
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/* --- BUTTONS & LINKS --- */
+a {
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-primary-icon,
+.link-btn {
+  padding: 12px 24px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-align: center;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+  display: inline-block;
+}
+
+.btn-primary,
+.btn-primary-icon {
+  background: linear-gradient(
+    to right,
+    var(--color-primary),
+    #a672f2
+  ); /* Gradient tím */
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary-icon:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-secondary);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(74, 85, 104, 0.2);
+}

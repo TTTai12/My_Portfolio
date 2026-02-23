@@ -1,0 +1,83 @@
+/* --- EXPERIENCE & EDUCATION SECTION --- */
+.experience-education-section {
+  text-align: center;
+}
+
+.experience-education-section h2 {
+  margin-bottom: 10px;
+}
+
+.content-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.work-experience-col h3,
+.education-col h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.timeline-item {
+  padding-left: 20px;
+  border-left: 2px solid var(--color-card); /* Đường timeline */
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.timeline-item .year {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.timeline-item h4 {
+  margin-bottom: 5px;
+}
+.timeline-item .company,
+.timeline-item .degree {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.timeline-item .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.timeline-item .tags .tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background-color: rgba(74, 144, 226, 0.1);
+  color: var(--color-primary);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(74, 144, 226, 0.3);
+  transition: all 0.2s ease;
+}
+
+.timeline-item .tags .tag:hover {
+  background-color: rgba(74, 144, 226, 0.2);
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}

@@ -1,0 +1,139 @@
+/* --- HERO SECTION --- */
+.hero-section {
+    /* 1. Ghi đè các thuộc tính của section chung */
+    max-width: 100% !important; /* Bắt buộc full chiều rộng */
+    width: 100%;
+    padding: 0 0 120px 0 !important; /* Xóa padding để ảnh chạm mép màn hình */
+    margin: 0;
+    height: auto; 
+    min-height: 80vh;
+    /* 2. Các thuộc tính flexbox giữ nguyên */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Hoặc 100vh nếu muốn full màn hình dọc */
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Ẩn các phần thừa nếu ảnh quá to */
+}
+/* Phần Background Art (Tạo hiệu ứng khối mờ) */
+/* Cần JavaScript hoặc CSS nâng cao để tạo hiệu ứng 3D như hình */
+.hero-background-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* pseudo elements */
+.hero-background-art::before,
+.hero-background-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 500ms ease;
+  opacity: 0;
+  will-change: opacity;
+}
+
+/* light image mặc định */
+.hero-background-art::before {
+  background-image: url('../../../../public/hero-bg1.jpg');
+  opacity: 1;
+}
+
+/* dark image mặc định ẩn */
+.hero-background-art::after {
+  background-image: url('../../../../public/dassss.jpg');
+  opacity: 0;
+}
+
+/* khi theme = dark thì crossfade */
+[data-theme="dark"] .hero-background-art::before { opacity: 0; }
+[data-theme="dark"] .hero-background-art::after  { opacity: 1; }
+
+/* overlay nếu cần để chữ dễ đọc */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15));
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 2;
+    position: relative;
+    
+}
+
+.freelance-tag {
+    display: inline-block;
+    background-color: var(--color-card);
+    color: var(--color-text-light);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    color: var(--color-text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    /* Tạo hiệu ứng gradient cho chữ "experiences" */
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.cta-group a {
+    margin: 0 10px;
+}
+
+
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+    text-align: left;
+}
+
+.feature-item {
+    background-color: var(--color-card);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-item h3 {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+.feature-item .icon {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+.feature-item p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    color: var(--color-text-secondary);
+}

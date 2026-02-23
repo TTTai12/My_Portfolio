@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Frontend Developer",
+    "description": "I bridge the gap between engineering and aesthetics, ensuring that every pixel serves a purpose.",
+    "cta": {
+      "viewWork": "View My Work",
+      "contact": "Get In Touch"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "yearsExperience": "Years Experience",
+    "projectsCompleted": "Projects Completed",
+    "technicalProficiency": "Technical Proficiency",
+    "loading": "Loading...",
+    "errorLoading": "Unable to load data",
+    "noSkills": "No skills found. Add skills in the admin panel!"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of my recent work. Each project is built with a focus on performance and user experience.",
+    "viewCode": "Code",
+    "viewLive": "Live Demo",
+    "loading": "Loading projects...",
+    "error": "Failed to load projects",
+    "checkBackend": "Please check if the backend is running on port 3000",
+    "noProjects": "No projects found. Add some projects in the admin panel!"
+  },
+  "experience": {
+    "title": "Experience & Education",
+    "subtitle": "My professional journey and academic background.",
+    "workExperience": "Work Experience",
+    "education": "Education",
+    "present": "Present",
+    "loading": "Loading experience and education...",
+    "noWorkExperience": "No work experience found. Add some in the admin panel!",
+    "noEducation": "No education entries found. Add some in the admin panel!"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a question or want to work together? Feel free to reach out!",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your Name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What's this about?",
+      "message": "Message",
+      "messagePlaceholder": "Your message here...",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "success": "Message sent successfully! We'll get back to you soon.",
+    "error": "Failed to send message. Please try again.",
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "admin": "Admin"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "update": "Update"
+  }
+}

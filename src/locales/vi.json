@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "projects": "Dự án",
+    "experience": "Kinh nghiệm",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "greeting": "Xin chào, tôi là",
+    "role": "Lập trình viên Frontend",
+    "description": "Tôi kết nối khoảng cách giữa kỹ thuật và thẩm mỹ, đảm bảo rằng mỗi pixel đều phục vụ một mục đích.",
+    "cta": {
+      "viewWork": "Xem Dự Án",
+      "contact": "Liên Hệ"
+    }
+  },
+  "about": {
+    "title": "Giới Thiệu",
+    "yearsExperience": "Năm Kinh Nghiệm",
+    "projectsCompleted": "Dự Án Hoàn Thành",
+    "technicalProficiency": "Kỹ Năng Chuyên Môn",
+    "loading": "Đang tải...",
+    "errorLoading": "Không thể tải dữ liệu",
+    "noSkills": "Chưa có kỹ năng nào. Hãy thêm trong trang quản trị!"
+  },
+  "projects": {
+    "title": "Dự Án Nổi Bật",
+    "subtitle": "Một số dự án gần đây của tôi. Mỗi dự án được xây dựng với trọng tâm là hiệu suất và trải nghiệm người dùng.",
+    "viewCode": "Mã nguồn",
+    "viewLive": "Xem Demo",
+    "loading": "Đang tải dự án...",
+    "error": "Không thể tải dự án",
+    "checkBackend": "Vui lòng kiểm tra backend có đang chạy ở cổng 3000",
+    "noProjects": "Chưa có dự án nào. Hãy thêm dự án trong trang quản trị!"
+  },
+  "experience": {
+    "title": "Kinh Nghiệm & Học Vấn",
+    "subtitle": "Hành trình nghề nghiệp và nền tảng học thuật của tôi.",
+    "workExperience": "Kinh Nghiệm Làm Việc",
+    "education": "Học Vấn",
+    "present": "Hiện tại",
+    "loading": "Đang tải kinh nghiệm và học vấn...",
+    "noWorkExperience": "Chưa có kinh nghiệm làm việc. Hãy thêm trong trang quản trị!",
+    "noEducation": "Chưa có học vấn. Hãy thêm trong trang quản trị!"
+  },
+  "contact": {
+    "title": "Liên Hệ",
+    "subtitle": "Có câu hỏi hoặc muốn hợp tác? Hãy liên hệ với tôi!",
+    "form": {
+      "name": "Họ tên",
+      "namePlaceholder": "Tên của bạn",
+      "email": "Email",
+      "emailPlaceholder": "email@cua-ban.com",
+      "subject": "Chủ đề",
+      "subjectPlaceholder": "Về vấn đề gì?",
+      "message": "Nội dung",
+      "messagePlaceholder": "Tin nhắn của bạn...",
+      "send": "Gửi Tin Nhắn",
+      "sending": "Đang gửi..."
+    },
+    "success": "Gửi tin nhắn thành công! Chúng tôi sẽ phản hồi sớm.",
+    "error": "Gửi tin nhắn thất bại. Vui lòng thử lại.",
+    "info": {
+      "email": "Email",
+      "phone": "Điện thoại",
+      "location": "Địa chỉ"
+    }
+  },
+  "footer": {
+    "rights": "Bảo lưu mọi quyền.",
+    "admin": "Quản trị"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Lỗi",
+    "retry": "Thử lại",
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "create": "Tạo mới",
+    "update": "Cập nhật"
+  }
+}

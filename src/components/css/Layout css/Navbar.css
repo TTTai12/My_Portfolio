@@ -1,0 +1,57 @@
+/* Navbar.css - import sau index.css */
+
+/* Mặc định: trong suốt khi ở đầu trang */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  z-index: 9999;
+
+  background-color: transparent; /* trong suốt ở top */
+  color: var(--navbar-text);
+  transition: background-color 260ms ease, box-shadow 260ms ease, padding 180ms ease, backdrop-filter 260ms ease;
+  backdrop-filter: none;
+  border-bottom: none;
+}
+
+/* Khi cuộn: bật overlay + blur + nền đậm hơn */
+.navbar.scrolled {
+  /* nền đậm hơn: tăng opacity (0.95 gần như đặc) */
+  background-color: rgba(var(--navbar-bg-rgba, 255,255,255), 0.95);
+
+  /* blur và saturate để cảm giác "mờ" */
+  -webkit-backdrop-filter: blur(10px) saturate(130%);
+  backdrop-filter: blur(10px) saturate(130%);
+
+  /* shadow rõ hơn để tách khỏi nội dung */
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  padding: 12px 5%;
+}
+
+/* Dark theme override khi scrolled */
+:root[data-theme="dark"] .navbar.scrolled {
+  background-color: rgba(var(--navbar-bg-rgba-dark, 18,18,18), 0.95);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Nội dung navbar */
+.navbar .logo { font-weight: 700; font-size: 1.05rem; }
+.nav-links { display:flex; gap:14px; align-items:center; }
+.nav-links a { color: inherit; text-decoration:none; font-weight:500; padding:6px 8px; }
+.btn-primary { background: linear-gradient(90deg,#8d4fde,#d946ef); color:#fff; padding:8px 12px; border-radius:8px; text-decoration:none; font-weight:600; }
+
+/* Theme toggle kế thừa màu để luôn nhìn thấy */
+.theme-toggle { color: var(--icon-color); background:transparent; border:none; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; padding:6px; border-radius:6px; }
+
+/* Responsive */
+@media (max-width:768px) {
+  .navbar { padding: 12px 4%; }
+  .navbar.scrolled { padding: 10px 4%; }
+}
