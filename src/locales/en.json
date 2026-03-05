@@ -9,11 +9,28 @@
   "hero": {
     "greeting": "Hi, I'm",
     "role": "Frontend Developer",
-    "description": "I bridge the gap between engineering and aesthetics, ensuring that every pixel serves a purpose.",
+    "description": "I am a developer focusing on honing my skills through real-world projects. I am always excited about exploring new technologies.",
     "cta": {
       "viewWork": "View My Work",
       "contact": "Get In Touch"
-    }
+    },
+    "features": [
+      {
+        "icon": "< >",
+        "title": "Frontend Development",
+        "desc": "Building modern, reusable UI components using React and TypeScript."
+      },
+      {
+        "icon": "🖼️",
+        "title": "Optimized Experience",
+        "desc": "Creating responsive designs that ensure a seamless experience across all devices."
+      },
+      {
+        "icon": "📱",
+        "title": "Growth Mindset",
+        "desc": "Always eager to tackle new challenges and adopt professional development workflows."
+      }
+    ]
   },
   "about": {
     "title": "About Me",

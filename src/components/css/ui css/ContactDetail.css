@@ -1,19 +1,52 @@
 .contact-info h2 {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .contact-info p {
-    color: var(--color-text-secondary);
-    margin-bottom: 40px;
+  color: var(--color-text-secondary);
+  margin-bottom: 40px;
 }
 
 .contact-detail {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(141, 79, 222, 0.05), transparent);
+  border-left: 3px solid #8d4fde;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.contact-detail:hover {
+  background: linear-gradient(135deg, rgba(141, 79, 222, 0.1), transparent);
+  transform: translateX(4px);
+}
+
 .contact-detail i {
-    font-size: 1.2rem;
-    color: var(--color-primary);
-    margin-right: 15px;
+  font-size: 1.5rem;
+  color: #8d4fde;
+  margin-right: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-detail div {
+  flex: 1;
+}
+
+.contact-detail p {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.contact-detail label {
+  display: block;
+  font-size: 0.85rem;
+  color: #8d4fde;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }

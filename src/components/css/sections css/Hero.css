@@ -41,13 +41,13 @@
 
 /* light image mặc định */
 .hero-background-art::before {
-  background-image: url('../../../../public/hero-bg1.jpg');
+  background-image: url('../../../assets/images/fsd.jpg');
   opacity: 1;
 }
 
 /* dark image mặc định ẩn */
 .hero-background-art::after {
-  background-image: url('../../../../public/dassss.jpg');
+  background-image: url('../../../assets/images/vasd.jpg');
   opacity: 0;
 }
 
@@ -67,9 +67,10 @@
 
 .hero-content {
     max-width: 800px;
+    width: 100%;
     z-index: 2;
     position: relative;
-    
+    overflow: visible;
 }
 
 .freelance-tag {
@@ -103,8 +104,14 @@
     color: transparent;
 }
 
+.cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
 .cta-group a {
-    margin: 0 10px;
+  margin: 0;
 }
 
 
@@ -136,4 +143,54 @@
     font-size: 0.9rem;
     margin-bottom: 0;
     color: var(--color-text-secondary);
+}
+
+/* --- HERO & FEATURES RESPONSIVE --- */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 0 5% 80px 5% !important;
+    }
+    .hero-content {
+        padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .feature-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 0 5% 60px 5% !important;
+    }
+    .hero-content {
+        padding: 0 16px;
+    }
+    .hero-content h1 {
+        font-size: 1.75rem;
+        word-wrap: break-word;
+    }
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+    .features-grid {
+        gap: 16px;
+        margin-top: 32px;
+    }
+    .feature-item {
+        padding: 16px;
+    }
+    .feature-item h3 {
+        font-size: 1rem;
+    }
+    .feature-item p {
+        font-size: 0.85rem;
+    }
 }

@@ -28,8 +28,24 @@
 
 .bar-container span {
     position: absolute;
-    right: -30px; /* Di chuyển phần trăm ra xa thanh bar */
-    top: -15px;
+    right: 4px;
+    top: -18px;
     font-size: 0.8rem;
     color: var(--color-text-light);
+}
+
+/* Responsive - đảm bảo skill bar không bị tràn trên mobile */
+@media (max-width: 768px) {
+    .skill-bar {
+        margin-bottom: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-bar {
+        margin-bottom: 14px;
+    }
+    .skill-bar label {
+        font-size: 0.9rem;
+    }
 }

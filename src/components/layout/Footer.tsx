@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="site-footer">
       <p>
-        <strong>Tien Tran</strong> · Full‑Stack Developer {"  ·  "}
+        <strong>Tien Tan Tai</strong> · Full‑Stack Developer {"  ·  "}
         <a
           href={
             import.meta.env.VITE_ADMIN_URL || "http://localhost:3000/auth/login"

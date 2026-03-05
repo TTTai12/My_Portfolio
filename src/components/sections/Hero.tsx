@@ -17,15 +17,15 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Available for freelance work
+          Open to opportunities
         </motion.span>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Building digital <span className="highlight">experiences</span> that
-          matter.
+          Continuously <span className="highlight">learning</span> creating
+          modern web interfaces.
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -55,37 +55,22 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          {/* Lưới các tính năng có thể là một component FeatureItem riêng */}
-          {[
-            {
-              icon: "< >",
-              title: "Clean Code",
-              desc: "Maintainable, scalable architecture.",
-            },
-            {
-              icon: "🖼️",
-              title: "Modern Design",
-              desc: "Aesthetic, intuitive interfaces.",
-            },
-            {
-              icon: "📱",
-              title: "Responsive",
-              desc: "Flawless on every device.",
-            },
-          ].map((feature, index) => (
-            <motion.div
-              key={feature.title}
-              className="feature-item"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -5 }}
-            >
-              <span className="icon">{feature.icon}</span>
-              <h3>{feature.title}</h3>
-              <p>{feature.desc}</p>
-            </motion.div>
-          ))}
+          {(t("hero.features", { returnObjects: true }) as any[]).map(
+            (feature, index) => (
+              <motion.div
+                key={feature.title}
+                className="feature-item"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
+                whileHover={{ scale: 1.05, y: -5 }}
+              >
+                <span className="icon">{feature.icon}</span>
+                <h3>{feature.title}</h3>
+                <p>{feature.desc}</p>
+              </motion.div>
+            ),
+          )}
         </motion.div>
       </div>
     </section>

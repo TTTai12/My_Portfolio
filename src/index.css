@@ -72,6 +72,11 @@ body {
   color: var(--color-text-light);
   line-height: 1.6;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 h1,
@@ -109,6 +114,7 @@ h3 {
 section {
   margin: 0 auto;
   padding: var(--padding-section);
+  max-width: 100%;
 }
 
 .section-subtitle {
@@ -133,13 +139,16 @@ a:hover {
 .btn-primary-icon,
 .link-btn {
   padding: 12px 24px;
+  min-height: 44px;
   border-radius: var(--border-radius);
   font-weight: 600;
   text-align: center;
   transition:
     background-color 0.3s,
     transform 0.2s;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-primary,

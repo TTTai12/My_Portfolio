@@ -9,11 +9,28 @@
   "hero": {
     "greeting": "Xin chào, tôi là",
     "role": "Lập trình viên Frontend",
-    "description": "Tôi kết nối khoảng cách giữa kỹ thuật và thẩm mỹ, đảm bảo rằng mỗi pixel đều phục vụ một mục đích.",
+    "description": "Tôi là một lập trình viên đang tập trung trau dồi kỹ năng thông qua các dự án thực tế. Tôi luôn hào hứng khám phá những công nghệ mới.",
     "cta": {
       "viewWork": "Xem Dự Án",
       "contact": "Liên Hệ"
-    }
+    },
+    "features": [
+      {
+        "icon": "< >",
+        "title": "Phát Triển Frontend",
+        "desc": "Xây dựng các component UI hiện đại, tái sử dụng được bằng React và TypeScript."
+      },
+      {
+        "icon": "🖼️",
+        "title": "Trải Nghiệm Tối Ưu",
+        "desc": "Tạo các thiết kế responsive đảm bảo trải nghiệm người dùng mượt mà trên mọi thiết bị."
+      },
+      {
+        "icon": "📱",
+        "title": "Tinh Thần Học Hỏi",
+        "desc": "Luôn sẵn lòng đối mặt với những thách thức mới và áp dụng quy trình phát triển chuyên nghiệp."
+      }
+    ]
   },
   "about": {
     "title": "Giới Thiệu",
