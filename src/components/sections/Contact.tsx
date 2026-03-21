@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
       </div>
 
       {/* Sử dụng Component ContactForm */}
-      <ContactForm />
+      {/* <ContactForm /> */}
     </section>
   );
 };
