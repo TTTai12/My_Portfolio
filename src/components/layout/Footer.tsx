@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
   return (
     <footer className="site-footer">
       <p>
-        <strong>Tien Tan Tai</strong> · Full‑Stack Developer {"  ·  "}
-        <a
+        <strong>Tien Tan Tai</strong> · Front End Developer {"  ·  "}
+        {/* <a
           href={
             import.meta.env.VITE_ADMIN_URL || "http://localhost:3000/auth/login"
           }
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.65")}
         >
           {t("footer.admin")} panel
-        </a>
+        </a> */}
       </p>
       <div className="social-links">
         <a
