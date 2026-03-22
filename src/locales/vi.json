@@ -63,14 +63,14 @@
   },
   "contact": {
     "title": "Liên Hệ",
-    "subtitle": "Có câu hỏi hoặc muốn hợp tác? Hãy liên hệ với tôi!",
+    "subtitle": " Hãy liên hệ với tôi!",
     "form": {
       "name": "Họ tên",
       "namePlaceholder": "Tên của bạn",
       "email": "Email",
       "emailPlaceholder": "email@cua-ban.com",
       "subject": "Chủ đề",
-      "subjectPlaceholder": "Về vấn đề gì?",
+      "subjectPlaceholder": "Tiêu đề",
       "message": "Nội dung",
       "messagePlaceholder": "Tin nhắn của bạn...",
       "send": "Gửi Tin Nhắn",

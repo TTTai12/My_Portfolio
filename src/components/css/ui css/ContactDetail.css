@@ -1,52 +1,148 @@
-.contact-info h2 {
-  margin-bottom: 15px;
-}
-
-.contact-info p {
-  color: var(--color-text-secondary);
-  margin-bottom: 40px;
-}
-
+/* Contact Detail Card - Modern 3 Column Grid */
 .contact-detail {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 28px;
-  padding: 20px;
-  background: linear-gradient(135deg, rgba(141, 79, 222, 0.05), transparent);
-  border-left: 3px solid #8d4fde;
-  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, rgba(141, 79, 222, 0.06), rgba(217, 70, 239, 0.03));
+  border: 1px solid rgba(141, 79, 222, 0.15);
+  border-radius: 16px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background gradient effect on hover */
+.contact-detail::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(141, 79, 222, 0.12), rgba(217, 70, 239, 0.06));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .contact-detail:hover {
-  background: linear-gradient(135deg, rgba(141, 79, 222, 0.1), transparent);
-  transform: translateX(4px);
+  border-color: #8d4fde;
+  box-shadow: 0 12px 32px rgba(141, 79, 222, 0.15);
+  transform: translateY(-4px);
 }
 
+.contact-detail:hover::before {
+  opacity: 1;
+}
+
+/* Icon styling */
 .contact-detail i {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: #8d4fde;
-  margin-right: 18px;
+  margin-bottom: 16px;
   flex-shrink: 0;
-  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(141, 79, 222, 0.1), rgba(217, 70, 239, 0.05));
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
-.contact-detail div {
-  flex: 1;
+.contact-detail:hover i {
+  background: linear-gradient(135deg, rgba(141, 79, 222, 0.18), rgba(217, 70, 239, 0.1));
+  transform: scale(1.08);
 }
 
+/* Text content */
 .contact-detail p {
-  font-size: 0.95rem;
-  color: var(--color-text-secondary);
   margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
-.contact-detail label {
+/* Label styling */
+.contact-detail p span {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #8d4fde;
-  font-weight: 600;
-  margin-bottom: 6px;
+  font-weight: 700;
+  margin-bottom: 8px;
   text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+/* Value styling */
+.contact-detail p {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-detail {
+    padding: 28px 20px;
+  }
+
+  .contact-detail i {
+    font-size: 2.2rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-detail p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-detail {
+    padding: 24px 16px;
+  }
+
+  .contact-detail i {
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+  }
+
+  .contact-detail p {
+    font-size: 0.9rem;
+  }
+
+  .contact-detail p span {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-detail {
+    padding: 20px 12px;
+  }
+
+  .contact-detail i {
+    font-size: 1.75rem;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+  }
+
+  .contact-detail p {
+    font-size: 0.85rem;
+  }
+
+  .contact-detail p span {
+    font-size: 0.7rem;
+  }
+}
   letter-spacing: 0.5px;
 }

@@ -29,10 +29,12 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="contact-section">
-      <div className="contact-info">
+      <div className="contact-header">
         <h2>{t("contact.title")}</h2>
         <p>{t("contact.subtitle")}</p>
+      </div>
 
+      <div className="contact-info">
         {aboutData && (
           <>
             {aboutData.email && (

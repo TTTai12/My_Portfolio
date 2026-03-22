@@ -13,7 +13,7 @@ const ContactDetail: React.FC<ContactDetailProps> = ({ icon, value, label }) => 
     <div className="contact-detail">
       <i className="icon-placeholder">{icon}</i>
       <p>
-        <span style={{ fontWeight: 600 }}>{label}: </span>
+        <span>{label}</span>
         {value}
       </p>
     </div>
